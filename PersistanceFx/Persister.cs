@@ -50,7 +50,7 @@ namespace PersistanceFx
 
             for (int i = 0; i < properties.Length; i++)
             {
-                var targetPropertyTypeAttribute = source.GetType().GetCustomAttributes(typeof(TargetPropertyTypeAttribute), true).FirstOrDefault() as TargetPropertyTypeAttribute;
+                var targetPropertyTypeAttribute = properties[i].GetType().GetCustomAttributes(typeof(TargetPropertyTypeAttribute), true).FirstOrDefault() as TargetPropertyTypeAttribute;
                 PropertyTye _propertyFormat = targetPropertyTypeAttribute.format;
                 Console.WriteLine($"Target format is : {_propertyFormat} ");
 
